@@ -48,6 +48,12 @@ const init = async () => {
         id: artifacts.decoded.payload.id,
       },
     }),
+    validate: (artifacts) => ({
+    isValid: true,
+    credentials: {
+      id: artifacts.decoded.payload.id,
+    },
+  }),
   });
   await server.register([
     {
